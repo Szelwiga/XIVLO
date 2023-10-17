@@ -17,6 +17,7 @@ body {
 }
 #data {
 	align: right;
+	float: right;
 }
 #link {
 	text-decoration: none;
