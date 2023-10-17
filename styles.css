@@ -5,9 +5,8 @@ body {
 	font-family: monospace;
 	padding: 30px 30px;
 }
-.title {
+#title {
 	font-size: 25px;
-	padding: 30px 0px;
 }
 #box {
 	border: solid 3px;
@@ -16,7 +15,7 @@ body {
 	width: 40%;
 	margin: 5px;
 }
-#div {
+#data {
 	padding: 5px 5px;
 	algin: right;
 }
