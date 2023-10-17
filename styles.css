@@ -6,12 +6,15 @@ body {
 	padding: 30px 30px;
 }
 .title {
-	font-size: 20px;
+	font-size: 25px;
 	padding: 30px 0px;
 }
 #box {
+	border: solid 3px;
+	border-radius: 5px;
 	height: 50px;
 	width: 40%;
+	margin: 5px;
 }
 #div {
 	padding: 5px 5px;
