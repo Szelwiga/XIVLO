@@ -13,9 +13,12 @@ body {
 	border-radius: 5px;
 	width: 40%;
 	margin: 5px;
-	padding: 7px 7px;
+	padding: 10px 10px;
 }
 #data {
-	padding: 5px 5px;
-	algin: right;
+	align: right;
+}
+a {
+	text-decoration: none;
+	color: #FFFFFF;
 }
