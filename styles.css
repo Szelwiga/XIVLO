@@ -1,0 +1,10 @@
+body {
+	background-color: #000000;
+	color: #FFFFFF;
+	font-size: 16px;
+	font-family: monospace;
+	padding: 30px 30px;
+}
+.title {
+	font-size: 20px;
+}
