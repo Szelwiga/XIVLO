@@ -16,7 +16,7 @@ const int P = 1<<20; // Taki rozmiar drzewa wystarczy
 const int INF = 1ll<<60;
 class tree{
 	int s[P*2+10]; /* tablica na minimalna wartosc w poddrzewie */
-	int t[P*2+10]; /* wartosc delty (nasze lazy) -- o ile musimy zmodyfikowac poddrzewo */
+	int t[P*2+10]; /* wartosc delty (nasze lazy) -- o ile musimy zmodyfikowac poddrzewo */
 	int A, B, C; /* Poczatek i koniec przedzialu dla każdego zapytania */
 	void lazy(int u){ /* spychanie wartosci lazy w dol */
 		s[u] += t[u];
