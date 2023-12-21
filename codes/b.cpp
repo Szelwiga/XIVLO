@@ -15,20 +15,20 @@ template <typename T> static inline tag <ostream> operator <<(tag <ostream> os, 
 const int P = 1<<20; // Taki rozmiar drzewa wystarczy
 const int INF = 1ll<<60;
 class tree{
-	int s[P*2+10]; /* tablica na minimalną wartość w poddrzewie */
-	int t[P*2+10]; /* wartość delty (nasze lazy) -- o ile musimy zmodyfikować poddrzewo */
-	int A, B, C; /* Początek i koniec przedziału dla każdego zapytania */
-	void lazy(int u){ /* spychanie wartości lazy w dół */
+	int s[P*2+10]; /* tablica na minimalna wartosc w poddrzewie */
+	int t[P*2+10]; /* wartosc delty (nasze lazy) -- o ile musimy zmodyfikowac poddrzewo */
+	int A, B, C; /* Poczatek i koniec przedzialu dla każdego zapytania */
+	void lazy(int u){ /* spychanie wartosci lazy w dol */
 		s[u] += t[u];
 		if (u<P)
 			t[u*2] += t[u],
 			t[u*2+1] += t[u];
 		t[u] = 0;
 	}
-	int mid(int a, int b){ /* funkcja, która wyznacza "środkowy" wierzchołek */
+	int mid(int a, int b){ /* funkcja, ktora wyznacza "srodkowy" wierzcholek */
 		return (a+b)/2;
 	}
-	/* funkcja update, zaczynamy od korzenia, którego przedział odpowiedzialności to wszyskie liście */
+	/* funkcja update, zaczynamy od korzenia, ktorego przedzial odpowiedzialnosci to wszyskie liscie */
 	void upd(int u=1, int low=0, int high=P-1){
 		lazy(u);
 		if (high<A || low>B)	return;
@@ -51,10 +51,10 @@ class tree{
 	}
 	public:
 	void update(int a, int b, int c){
-		A=a, B=b, C=c, upd(); /* ustawiamy A, B i C oraz wołamy prawdziwą funkcję update */
+		A=a, B=b, C=c, upd(); /* ustawiamy A, B i C oraz wolamy prawdziwa funkcje update */
 	}
 	int ask(int a, int b){
-		A=a, B=b; /* jak wyżej */
+		A=a, B=b; /* jak wyzej */
 		return query();
 	}
 };
